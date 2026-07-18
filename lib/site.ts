@@ -9,10 +9,11 @@ export const site = {
   horario: process.env.NEXT_PUBLIC_HORARIO ?? "",
   whatsapp: process.env.NEXT_PUBLIC_WHATSAPP ?? "5561999999999",
   instagram: process.env.NEXT_PUBLIC_INSTAGRAM ?? "@lavoyerbsb.noroeste",
-  anosMercado: process.env.NEXT_PUBLIC_ANOS_MERCADO ?? "8 anos",
+  anosMercado: process.env.NEXT_PUBLIC_ANOS_MERCADO ?? "9 anos",
   textoCTA: process.env.NEXT_PUBLIC_TEXTO_CTA ?? "Agendar Aula Experimental",
   diferencial1:
-    process.env.NEXT_PUBLIC_DIFERENCIAL_1 ?? "Cultura de comunidade",
+    process.env.NEXT_PUBLIC_DIFERENCIAL_1 ??
+    "A maior academia de calistenia da América Latina, com metodologia validada em múltiplas unidades pelo Brasil.",
   diferencial2:
     process.env.NEXT_PUBLIC_DIFERENCIAL_2 ??
     "Modalidade de calistenia com uma metodologia própria e validada",

@@ -44,10 +44,10 @@ export default function Header() {
             />
           </span>
           <span className="flex flex-col leading-none">
-            <span className="font-heading text-lg font-bold tracking-wide text-white">
+            <span className="font-heading text-lg font-medium tracking-wide text-white">
               LAVOYER
             </span>
-            <span className="text-[10px] font-semibold uppercase tracking-[0.25em] text-primary">
+            <span className="text-[10px] font-medium uppercase tracking-[0.25em] text-primary">
               Calistenia
             </span>
           </span>
@@ -58,7 +58,7 @@ export default function Header() {
             <a
               key={link.href}
               href={link.href}
-              className="font-body text-[15px] font-semibold leading-none text-white/85 transition-colors hover:text-primary"
+              className="font-body text-[15px] font-medium leading-none text-white/85 transition-colors hover:text-primary"
             >
               {link.label}
             </a>

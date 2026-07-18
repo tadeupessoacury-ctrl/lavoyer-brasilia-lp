@@ -11,10 +11,10 @@ export default function Localizacao() {
     <section id="localizacao" className="bg-black py-20 text-white md:py-28">
       <div className="mx-auto grid max-w-7xl gap-12 px-5 md:grid-cols-2 md:px-8 md:gap-16">
         <FadeIn>
-          <span className="font-body text-sm font-semibold uppercase tracking-[0.2em] text-primary">
+          <span className="font-body text-sm font-medium uppercase tracking-[0.2em] text-primary">
             Localização
           </span>
-          <h2 className="mt-3 font-heading text-3xl font-extrabold uppercase md:text-4xl">
+          <h2 className="mt-3 font-heading text-3xl font-medium uppercase md:text-4xl">
             Venha nos conhecer no Noroeste
           </h2>
           <p className="mt-4 font-body text-white/70 md:text-lg">

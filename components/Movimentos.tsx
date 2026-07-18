@@ -63,10 +63,10 @@ export default function Movimentos() {
     <section id="movimentos" className="bg-white py-20 md:py-28">
       <div className="mx-auto max-w-7xl px-5 md:px-8">
         <FadeIn className="mx-auto max-w-2xl text-center">
-          <span className="font-heading text-lg font-extrabold uppercase tracking-[0.2em] text-primary md:text-xl">
+          <span className="font-heading text-lg font-medium uppercase tracking-[0.2em] text-primary md:text-xl">
             Movimentos Calistênicos
           </span>
-          <h2 className="mt-3 font-heading text-3xl font-extrabold uppercase text-black md:text-4xl">
+          <h2 className="mt-3 font-heading text-3xl font-medium uppercase text-black md:text-4xl">
             O corpo como único equipamento
           </h2>
         </FadeIn>

@@ -13,26 +13,27 @@ export default function Hero() {
 
       <div className="relative z-10 mx-auto grid max-w-7xl items-center gap-12 px-5 md:px-8 lg:grid-cols-[0.95fr_1.2fr] lg:gap-10">
         <div className="order-2 text-center lg:order-1 lg:text-left">
-          <span className="mb-6 inline-flex items-center gap-2 rounded-full border border-primary/40 bg-primary/10 px-4 py-1.5 text-xs font-semibold uppercase tracking-[0.2em] text-primary">
+          <span className="mb-6 inline-flex items-center gap-2 rounded-full border border-primary/40 bg-primary/10 px-4 py-1.5 text-xs font-medium uppercase tracking-[0.2em] text-primary">
             Pré-lançamento · Brasília
           </span>
 
-          <h1 className="font-heading text-5xl font-extrabold uppercase leading-[1.02] text-white sm:text-6xl md:text-7xl">
+          <h1 className="font-heading text-5xl font-medium uppercase leading-[1.02] text-white sm:text-6xl md:text-7xl">
             Lavoyer
             <span className="block text-primary">Calistenia</span>
           </h1>
 
-          <p className="mx-auto mt-5 max-w-xl font-heading text-xl font-semibold text-white/90 md:text-2xl lg:mx-0">
-            Academia de Calistenia Premium em Brasília
-          </p>
-
-          <p className="mx-auto mt-5 max-w-lg border-l-2 border-primary/50 pl-4 font-body text-base italic text-white/50 md:text-lg lg:mx-0 lg:text-left">
-            &ldquo;{slogans[0] ?? "Venha com o que você tem: o seu corpo"}.&rdquo;
+          <p className="mx-auto mt-4 max-w-lg font-heading text-lg font-medium text-white/80 md:text-xl lg:mx-0">
+            Calistenia em Brasília — para todos os corpos e todos os níveis
           </p>
 
           <p className="mx-auto mt-5 max-w-lg font-body text-base text-white/70 md:text-lg lg:mx-0">
-            Metodologia própria, graduação por níveis e um personal trainer exclusivo para cada
-            aluno.
+            Metodologia própria Lavoyer, feita para quem está começando agora — sem
+            pré-requisitos, sem experiência necessária. Você é acompanhado por profissionais
+            formados na nossa metodologia durante toda a jornada.
+          </p>
+
+          <p className="mx-auto mt-6 max-w-lg font-heading text-lg font-medium text-primary md:text-xl lg:mx-0">
+            {slogans[0] ?? "Venha com o que você tem: o seu corpo"}
           </p>
 
           <div className="mt-9 flex justify-center lg:justify-start">

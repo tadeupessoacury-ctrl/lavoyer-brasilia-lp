@@ -1,3 +1,4 @@
+import Image from "next/image";
 import FadeIn from "./FadeIn";
 import CTAButton from "./CTAButton";
 import { site } from "@/lib/site";
@@ -9,20 +10,38 @@ const servicos = [
       "Conheça a metodologia Lavoyer na prática: uma semana para sentir a modalidade antes de decidir.",
     tema: "light" as const,
     destaque: false,
+    borderClass: "border-black/10 hover:border-primary/40",
+    logo: null,
+    logoReservado: false,
+    eyebrow: null,
   },
   {
     nome: "Calistenia",
     descricao:
-      "Nosso carro-chefe. Metodologia própria e validada, com graduação por níveis do iniciante ao avançado.",
+      "Metodologia própria e validada, que acompanha sua evolução desde o primeiro treino.",
     tema: "dark" as const,
     destaque: true,
+    borderClass: "border-2 border-primary shadow-xl shadow-primary/25 lg:-translate-y-3",
+    logo: {
+      src: "/images/logo-calistenia.jpg",
+      alt: "Logo Lavoyer Calistenia",
+    },
+    logoReservado: false,
+    eyebrow: null,
   },
   {
     nome: "Calistenia Kids",
     descricao:
-      "Desenvolvimento motor, disciplina e diversão para os praticantes mais jovens da comunidade.",
+      "Desenvolvimento motor, disciplina e diversão em um ambiente seguro e acolhedor, pensado especialmente para os praticantes mais jovens da comunidade.",
     tema: "light" as const,
     destaque: false,
+    borderClass: "border-black/10 hover:border-kids",
+    logo: {
+      src: "/images/logo-kids.jpg",
+      alt: "Logo Lavoyer Kids",
+    },
+    logoReservado: false,
+    eyebrow: null,
   },
   {
     nome: "Musculação",
@@ -30,6 +49,10 @@ const servicos = [
       "Estrutura completa para complementar o treino de calistenia e evoluir sua composição corporal.",
     tema: "dark" as const,
     destaque: false,
+    borderClass: "border-white/10 hover:border-fit",
+    logo: null,
+    logoReservado: true,
+    eyebrow: "Lavoyer Fit",
   },
 ];
 
@@ -38,10 +61,10 @@ export default function Servicos() {
     <section id="servicos" className="bg-white py-20 md:py-28">
       <div className="mx-auto max-w-7xl px-5 md:px-8">
         <FadeIn className="mx-auto max-w-2xl text-center">
-          <span className="font-heading text-lg font-extrabold uppercase tracking-[0.2em] text-primary md:text-xl">
+          <span className="font-heading text-lg font-medium uppercase tracking-[0.2em] text-primary md:text-xl">
             Serviços
           </span>
-          <h2 className="mt-3 font-heading text-3xl font-extrabold uppercase text-black md:text-4xl">
+          <h2 className="mt-3 font-heading text-3xl font-medium uppercase text-black md:text-4xl">
             Um ecossistema completo de treino
           </h2>
           <p className="mt-4 font-body text-neutral-600 md:text-lg">
@@ -56,21 +79,32 @@ export default function Servicos() {
               <div
                 className={`group relative flex h-full flex-col items-center rounded-2xl border p-7 text-center transition-all duration-300 hover:-translate-y-1 hover:shadow-xl ${
                   servico.tema === "dark" ? "bg-black text-white" : "bg-white text-black"
-                } ${
-                  servico.destaque
-                    ? "border-2 border-primary shadow-xl shadow-primary/25 lg:-translate-y-3"
-                    : servico.tema === "dark"
-                      ? "border-white/10 hover:border-primary/50"
-                      : "border-black/10 hover:border-primary/40"
-                }`}
+                } ${servico.borderClass}`}
               >
-                {servico.destaque && (
-                  <span className="mb-4 inline-block rounded-full bg-primary px-4 py-1.5 text-xs font-bold uppercase tracking-wide text-black">
-                    Serviço destaque
+                {servico.logo && (
+                  <span className="relative mb-4 h-16 w-16 shrink-0 overflow-hidden rounded-2xl">
+                    <Image
+                      src={servico.logo.src}
+                      alt={servico.logo.alt}
+                      fill
+                      sizes="64px"
+                      className="object-cover"
+                    />
                   </span>
                 )}
+
+                {servico.logoReservado && (
+                  <span className="mb-4 flex h-16 w-16 shrink-0 items-center justify-center rounded-2xl border-2 border-dashed border-fit/50" />
+                )}
+
+                {servico.eyebrow && (
+                  <span className="mb-1 font-body text-xs font-medium uppercase tracking-[0.2em] text-fit">
+                    {servico.eyebrow}
+                  </span>
+                )}
+
                 <h3
-                  className={`font-heading font-bold uppercase ${
+                  className={`font-heading font-medium uppercase ${
                     servico.destaque ? "text-2xl" : "text-xl"
                   }`}
                 >
@@ -83,6 +117,12 @@ export default function Servicos() {
                 >
                   {servico.descricao}
                 </p>
+
+                {servico.destaque && (
+                  <span className="mt-5 inline-block rounded-full bg-primary px-4 py-1.5 text-xs font-medium uppercase tracking-wide text-black">
+                    Serviço destaque
+                  </span>
+                )}
               </div>
             </FadeIn>
           ))}

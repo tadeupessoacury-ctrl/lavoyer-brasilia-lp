@@ -24,10 +24,10 @@ export default function Metodologia() {
 
         <div>
           <FadeIn>
-            <span className="font-body text-sm font-semibold uppercase tracking-[0.2em] text-primary">
+            <span className="font-body text-sm font-medium uppercase tracking-[0.2em] text-primary">
               Metodologia
             </span>
-            <h2 className="mt-3 font-heading text-3xl font-extrabold uppercase md:text-4xl">
+            <h2 className="mt-3 font-heading text-3xl font-medium uppercase md:text-4xl">
               Uma graduação própria, validada na prática
             </h2>
             <p className="mt-4 max-w-xl font-body text-white/70 md:text-lg">
@@ -41,11 +41,11 @@ export default function Metodologia() {
             {niveis.map((nivel, i) => (
               <FadeIn key={nivel.nome} delay={i * 100}>
                 <div className="flex items-start gap-4 rounded-xl border border-white/10 bg-white/5 p-4">
-                  <span className="flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-primary font-heading text-sm font-bold text-black">
+                  <span className="flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-primary font-heading text-sm font-medium text-black">
                     {i + 1}
                   </span>
                   <div>
-                    <p className="font-heading text-sm font-bold uppercase tracking-wide">
+                    <p className="font-heading text-sm font-medium uppercase tracking-wide">
                       {nivel.nome}
                     </p>
                     <p className="mt-1 font-body text-sm text-white/60">{nivel.desc}</p>

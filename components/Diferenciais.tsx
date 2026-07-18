@@ -4,7 +4,7 @@ import { site } from "@/lib/site";
 const items = [
   {
     numero: "01",
-    titulo: "Cultura de comunidade",
+    titulo: "Referência Nacional",
     texto: site.diferencial1,
   },
   {
@@ -24,10 +24,10 @@ export default function Diferenciais() {
     <section className="bg-primary py-20 md:py-28">
       <div className="mx-auto max-w-7xl px-5 md:px-8">
         <FadeIn className="mx-auto max-w-2xl text-center">
-          <span className="font-heading text-lg font-extrabold uppercase tracking-[0.2em] text-black md:text-xl">
+          <span className="font-heading text-lg font-medium uppercase tracking-[0.2em] text-black md:text-xl">
             Por que Lavoyer
           </span>
-          <h2 className="mt-3 font-heading text-3xl font-extrabold uppercase text-black md:text-4xl">
+          <h2 className="mt-3 font-heading text-3xl font-medium uppercase text-black md:text-4xl">
             Diferenciais que constroem resultado
           </h2>
         </FadeIn>
@@ -36,10 +36,10 @@ export default function Diferenciais() {
           {items.map((item, i) => (
             <FadeIn key={item.numero} delay={i * 120}>
               <div className="h-full rounded-2xl border-2 border-transparent bg-white p-8 shadow-sm transition-all duration-300 hover:border-secondary hover:shadow-lg">
-                <span className="font-heading text-4xl font-extrabold text-primary/30">
+                <span className="font-heading text-4xl font-medium text-primary/30">
                   {item.numero}
                 </span>
-                <h3 className="mt-4 font-heading text-lg font-bold uppercase text-black">
+                <h3 className="mt-4 font-heading text-lg font-medium uppercase text-black">
                   {item.titulo}
                 </h3>
                 <p className="mt-3 font-body text-sm leading-relaxed text-neutral-600">

@@ -18,8 +18,8 @@ export default function Footer() {
               />
             </span>
             <div className="flex flex-col leading-none">
-              <span className="font-heading text-xl font-bold tracking-wide">LAVOYER</span>
-              <span className="text-[11px] font-semibold uppercase tracking-[0.25em] text-primary">
+              <span className="font-heading text-xl font-medium tracking-wide">LAVOYER</span>
+              <span className="text-[11px] font-medium uppercase tracking-[0.25em] text-primary">
                 Calistenia
               </span>
             </div>
@@ -30,13 +30,13 @@ export default function Footer() {
 
         <div className="grid gap-10 pt-10 md:grid-cols-3">
           <div>
-            <p className="font-heading text-sm font-bold uppercase tracking-wide text-white/50">
+            <p className="font-heading text-sm font-medium uppercase tracking-wide text-white/50">
               Endereço
             </p>
             <p className="mt-2 font-body text-sm text-white/75">{site.endereco}</p>
           </div>
           <div>
-            <p className="font-heading text-sm font-bold uppercase tracking-wide text-white/50">
+            <p className="font-heading text-sm font-medium uppercase tracking-wide text-white/50">
               Contato
             </p>
             <p className="mt-2 font-body text-sm text-white/75">
@@ -45,11 +45,11 @@ export default function Footer() {
             <p className="mt-1 font-body text-sm text-white/75">{site.instagram}</p>
           </div>
           <div>
-            <p className="font-heading text-sm font-bold uppercase tracking-wide text-white/50">
+            <p className="font-heading text-sm font-medium uppercase tracking-wide text-white/50">
               Lavoyer
             </p>
             <p className="mt-2 font-body text-sm text-white/75">
-              {site.anosMercado} de calistenia em Brasília. Pré-lançamento da unidade Noroeste.
+              {site.anosMercado} de metodologia Lavoyer. Pré-lançamento da unidade Noroeste.
             </p>
           </div>
         </div>
