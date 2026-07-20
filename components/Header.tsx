@@ -27,8 +27,8 @@ export default function Header() {
     <header
       className={`fixed inset-x-0 top-0 z-50 transition-all duration-500 ${
         scrolled
-          ? "bg-black/95 backdrop-blur-md shadow-lg shadow-black/20"
-          : "bg-gradient-to-b from-black/50 to-transparent"
+          ? "bg-secondary/95 backdrop-blur-md shadow-lg shadow-black/20"
+          : "bg-gradient-to-b from-secondary/60 to-transparent"
       }`}
     >
       <div className="mx-auto flex max-w-7xl items-center justify-between px-5 py-3 md:px-8">
@@ -44,7 +44,7 @@ export default function Header() {
             />
           </span>
           <span className="flex flex-col leading-none">
-            <span className="font-heading text-lg font-medium tracking-wide text-white">
+            <span className="font-heading text-lg font-bold tracking-wide text-white">
               LAVOYER
             </span>
             <span className="text-[10px] font-medium uppercase tracking-[0.25em] text-primary">
@@ -96,7 +96,7 @@ export default function Header() {
       </div>
 
       {menuOpen && (
-        <div className="border-t border-white/10 bg-black px-5 py-6 lg:hidden">
+        <div className="border-t border-white/10 bg-secondary px-5 py-6 lg:hidden">
           <nav className="flex flex-col gap-5">
             {navLinks.map((link) => (
               <a

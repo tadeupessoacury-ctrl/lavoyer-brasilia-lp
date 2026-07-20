@@ -1,4 +1,5 @@
 import FadeIn from "./FadeIn";
+import SplitReveal from "./SplitReveal";
 import CTAButton from "./CTAButton";
 import { site } from "@/lib/site";
 
@@ -8,15 +9,17 @@ export default function Localizacao() {
   )}&output=embed`;
 
   return (
-    <section id="localizacao" className="bg-black py-20 text-white md:py-28">
+    <section id="localizacao" className="bg-secondary py-20 text-white md:py-28">
       <div className="mx-auto grid max-w-7xl gap-12 px-5 md:grid-cols-2 md:px-8 md:gap-16">
         <FadeIn>
-          <span className="font-body text-sm font-medium uppercase tracking-[0.2em] text-primary">
+          <span className="font-body text-sm font-semibold uppercase tracking-[0.2em] text-primary">
             Localização
           </span>
-          <h2 className="mt-3 font-heading text-3xl font-medium uppercase md:text-4xl">
-            Venha nos conhecer no Noroeste
-          </h2>
+          <SplitReveal
+            as="h2"
+            className="mt-3 text-3xl font-bold uppercase md:text-4xl"
+            lines="Venha nos conhecer no Noroeste"
+          />
           <p className="mt-4 font-body text-white/70 md:text-lg">
             Estrutura completa em uma das regiões mais valorizadas de {site.cidadeEstado}.
             Agende sua semana experimental e conheça o espaço de perto.

@@ -35,7 +35,7 @@ export default function CTAButton({
       target="_blank"
       rel="noopener noreferrer"
       onClick={() => trackLead()}
-      className={`inline-flex shrink-0 items-center justify-center gap-2 whitespace-nowrap rounded-full font-heading font-medium uppercase tracking-normal sm:tracking-wide transition-all duration-300 hover:-translate-y-0.5 active:translate-y-0 ${variants[variant]} ${sizes[size]} ${className}`}
+      className={`inline-flex shrink-0 items-center justify-center gap-2 whitespace-nowrap rounded-full font-heading font-semibold uppercase tracking-normal sm:tracking-wide transition-all duration-300 hover:-translate-y-0.5 active:translate-y-0 ${variants[variant]} ${sizes[size]} ${className}`}
     >
       {label ?? site.textoCTA}
       <svg

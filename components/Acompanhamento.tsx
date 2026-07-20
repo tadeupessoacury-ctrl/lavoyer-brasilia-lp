@@ -1,5 +1,6 @@
 import Image from "next/image";
 import FadeIn from "./FadeIn";
+import SplitReveal from "./SplitReveal";
 import CTAButton from "./CTAButton";
 
 const pontos = [
@@ -10,16 +11,18 @@ const pontos = [
 
 export default function Acompanhamento() {
   return (
-    <section className="bg-neutral-50 py-20 md:py-28">
+    <section className="bg-surface-light py-20 md:py-28">
       <div className="mx-auto grid max-w-7xl gap-8 px-5 md:grid-cols-2 md:items-center md:gap-x-16 md:px-8">
         <div className="order-1 md:order-1">
           <FadeIn>
-            <span className="font-body text-sm font-medium uppercase tracking-[0.2em] text-primary">
+            <span className="font-body text-sm font-semibold uppercase tracking-[0.2em] text-primary">
               Acompanhamento capacitado
             </span>
-            <h2 className="mt-3 font-heading text-3xl font-medium uppercase text-black md:text-4xl">
-              Treinadores capacitados, prontos pra você
-            </h2>
+            <SplitReveal
+              as="h2"
+              className="mt-3 text-3xl font-bold uppercase text-secondary md:text-4xl"
+              lines="Treinadores capacitados, prontos pra você"
+            />
             <p className="mt-4 max-w-xl font-body text-neutral-600 md:text-lg">
               Nossos treinadores são formados na metodologia Lavoyer e acompanham de perto a
               evolução de cada aluno — postura, progressão e segurança em cada sessão.
@@ -31,11 +34,11 @@ export default function Acompanhamento() {
               {pontos.map((ponto, i) => (
                 <FadeIn key={ponto} delay={i * 100}>
                   <li className="flex items-start gap-3">
-                    <span className="mt-1 flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-black">
+                    <span className="mt-1 flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-secondary">
                       <svg viewBox="0 0 16 16" fill="none" className="h-3 w-3">
                         <path
                           d="M3 8.5l3 3 7-7"
-                          stroke="#FF8724"
+                          stroke="var(--color-primary)"
                           strokeWidth={2}
                           strokeLinecap="round"
                           strokeLinejoin="round"

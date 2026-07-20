@@ -1,5 +1,6 @@
 import Image from "next/image";
 import FadeIn from "./FadeIn";
+import SplitReveal from "./SplitReveal";
 import CTAButton from "./CTAButton";
 import { site } from "@/lib/site";
 
@@ -58,15 +59,17 @@ const servicos = [
 
 export default function Servicos() {
   return (
-    <section id="servicos" className="bg-white py-20 md:py-28">
+    <section id="servicos" className="bg-surface-light py-20 md:py-28">
       <div className="mx-auto max-w-7xl px-5 md:px-8">
         <FadeIn className="mx-auto max-w-2xl text-center">
-          <span className="font-heading text-lg font-medium uppercase tracking-[0.2em] text-primary md:text-xl">
+          <span className="font-heading text-lg font-semibold uppercase tracking-[0.2em] text-primary md:text-xl">
             Serviços
           </span>
-          <h2 className="mt-3 font-heading text-3xl font-medium uppercase text-black md:text-4xl">
-            Um ecossistema completo de treino
-          </h2>
+          <SplitReveal
+            as="h2"
+            className="mt-3 text-3xl font-bold uppercase text-secondary md:text-4xl"
+            lines="Um ecossistema completo de treino"
+          />
           <p className="mt-4 font-body text-neutral-600 md:text-lg">
             De quem está começando ao aluno graduado — a {site.nomeFantasia} oferece o caminho
             certo para cada momento.
@@ -78,7 +81,7 @@ export default function Servicos() {
             <FadeIn key={servico.nome} delay={i * 100} className="h-full">
               <div
                 className={`group relative flex h-full flex-col items-center rounded-2xl border p-7 text-center transition-all duration-300 hover:-translate-y-1 hover:shadow-xl ${
-                  servico.tema === "dark" ? "bg-black text-white" : "bg-white text-black"
+                  servico.tema === "dark" ? "bg-secondary text-white" : "bg-white text-secondary"
                 } ${servico.borderClass}`}
               >
                 {servico.logo && (
@@ -98,13 +101,13 @@ export default function Servicos() {
                 )}
 
                 {servico.eyebrow && (
-                  <span className="mb-1 font-body text-xs font-medium uppercase tracking-[0.2em] text-fit">
+                  <span className="mb-1 font-body text-xs font-semibold uppercase tracking-[0.2em] text-fit">
                     {servico.eyebrow}
                   </span>
                 )}
 
                 <h3
-                  className={`font-heading font-medium uppercase ${
+                  className={`font-heading font-bold uppercase ${
                     servico.destaque ? "text-2xl" : "text-xl"
                   }`}
                 >
@@ -119,7 +122,7 @@ export default function Servicos() {
                 </p>
 
                 {servico.destaque && (
-                  <span className="mt-5 inline-block rounded-full bg-primary px-4 py-1.5 text-xs font-medium uppercase tracking-wide text-black">
+                  <span className="mt-5 inline-block rounded-full bg-primary px-4 py-1.5 text-xs font-semibold uppercase tracking-wide text-black">
                     Serviço destaque
                   </span>
                 )}
