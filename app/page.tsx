@@ -24,11 +24,11 @@ export default function Home() {
         <Hero />
         <Calistenia />
         <Manifesto />
+        <Galeria />
         <Niveis />
         <Acompanhamento />
         <Movimentos />
         <Diferenciais />
-        <Galeria />
         <Comunidade />
         <ProvaSocial />
         <Inauguracao />
