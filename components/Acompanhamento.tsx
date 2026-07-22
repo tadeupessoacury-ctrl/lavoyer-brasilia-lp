@@ -4,28 +4,28 @@ import SplitReveal from "./SplitReveal";
 import CTAButton from "./CTAButton";
 
 const pontos = [
-  "Treinadores próprios, capacitados na metodologia Lavoyer",
-  "Acompanhamento de evolução, postura e prevenção de lesões",
-  "Suporte constante, do primeiro treino à graduação avançada",
+  "Progressão individualizada — o ritmo é seu, não do grupo",
+  "Correção em tempo real de postura, respiração e técnica",
+  "Acompanhamento próximo, do primeiro treino à graduação",
 ];
 
 export default function Acompanhamento() {
   return (
-    <section className="bg-surface-light py-20 md:py-28">
+    <section id="interacao" className="border-t border-black/5 bg-surface-light py-20 md:py-28">
       <div className="mx-auto grid max-w-7xl gap-8 px-5 md:grid-cols-2 md:items-center md:gap-x-16 md:px-8">
         <div className="order-1 md:order-1">
           <FadeIn>
-            <span className="font-body text-sm font-semibold uppercase tracking-[0.2em] text-primary">
-              Acompanhamento capacitado
+            <span className="font-body text-sm font-semibold uppercase tracking-[0.2em] text-neutral-500">
+              Treinador · Aluno
             </span>
             <SplitReveal
               as="h2"
-              className="mt-3 text-3xl font-bold uppercase text-secondary md:text-4xl"
-              lines="Treinadores capacitados, prontos pra você"
+              className="mt-3 text-3xl font-bold text-secondary md:text-4xl"
+              lines="Cada treino é guiado. Sempre."
             />
             <p className="mt-4 max-w-xl font-body text-neutral-600 md:text-lg">
-              Nossos treinadores são formados na metodologia Lavoyer e acompanham de perto a
-              evolução de cada aluno — postura, progressão e segurança em cada sessão.
+              Na Lavoyer não existe turma sem acompanhamento. Treinadores formados na nossa
+              metodologia conhecem seu nível e sabem quando empurrar — e quando esperar.
             </p>
           </FadeIn>
 

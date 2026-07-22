@@ -5,13 +5,14 @@ import "./globals.css";
 const saira = Saira({
   variable: "--font-saira",
   subsets: ["latin"],
-  weight: ["600", "700", "800"],
+  weight: ["200", "300", "400", "700", "800", "900"],
+  style: ["normal", "italic"],
 });
 
 const raleway = Raleway({
   variable: "--font-raleway",
   subsets: ["latin"],
-  weight: ["300", "400", "500"],
+  weight: ["300", "400"],
 });
 
 export const metadata: Metadata = {
@@ -35,7 +36,7 @@ export const metadata: Metadata = {
     title: "Lavoyer Calistenia | Brasília - Noroeste",
     description:
       "Metodologia própria, graduação por níveis e treinadores capacitados. Agende sua semana experimental.",
-    images: ["/images/hero-capa.jpg"],
+    images: ["/images/hero-capa-v2.jpg"],
     locale: "pt_BR",
     type: "website",
   },
@@ -54,7 +55,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="pt-BR" className={`${saira.variable} ${raleway.variable} h-full antialiased`}>
-      <body className="min-h-full flex flex-col bg-white">{children}</body>
+      <body className="min-h-full flex flex-col bg-background">{children}</body>
     </html>
   );
 }

@@ -58,7 +58,7 @@ export default function SplitReveal({
         <span key={lineIdx} className={`block ${line.className ?? ""}`}>
           {line.words.map(({ word, index }, i) => (
             <Fragment key={i}>
-              <span className="inline-block overflow-hidden align-top pb-[0.15em] -mb-[0.15em]">
+              <span className="inline-block overflow-hidden align-top pb-[0.15em]">
                 <span
                   data-split-word
                   data-visible={visible}

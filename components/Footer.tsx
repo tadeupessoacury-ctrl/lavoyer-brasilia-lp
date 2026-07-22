@@ -1,6 +1,6 @@
 import Image from "next/image";
 import CTAButton from "./CTAButton";
-import { site } from "@/lib/site";
+import { site, outrasUnidadesList } from "@/lib/site";
 
 export default function Footer() {
   return (
@@ -28,7 +28,7 @@ export default function Footer() {
           <CTAButton size="lg" />
         </div>
 
-        <div className="grid gap-10 pt-10 md:grid-cols-3">
+        <div className="grid gap-10 pt-10 md:grid-cols-4">
           <div>
             <p className="font-heading text-sm font-semibold uppercase tracking-wide text-white/50">
               Endereço
@@ -46,10 +46,23 @@ export default function Footer() {
           </div>
           <div>
             <p className="font-heading text-sm font-semibold uppercase tracking-wide text-white/50">
+              Outras unidades
+            </p>
+            <ul className="mt-2 space-y-1">
+              {outrasUnidadesList.map((unidade) => (
+                <li key={unidade} className="font-body text-sm text-white/75">
+                  {unidade}
+                </li>
+              ))}
+            </ul>
+          </div>
+          <div>
+            <p className="font-heading text-sm font-semibold uppercase tracking-wide text-white/50">
               Lavoyer
             </p>
             <p className="mt-2 font-body text-sm text-white/75">
-              {site.anosMercado} de metodologia Lavoyer. Pré-lançamento da unidade Noroeste.
+              A maior rede de calistenia da América Latina. {site.anosMercado} de metodologia
+              — pré-lançamento da unidade Noroeste.
             </p>
           </div>
         </div>

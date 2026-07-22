@@ -1,14 +1,14 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import Image from "next/image";
 import CTAButton from "./CTAButton";
+import LavoyerMark from "./LavoyerMark";
 
 const navLinks = [
-  { href: "#servicos", label: "Serviços" },
-  { href: "#metodologia", label: "Metodologia" },
-  { href: "#movimentos", label: "Movimentos" },
-  { href: "#comunidade", label: "Comunidade" },
+  { href: "#calistenia", label: "O que é" },
+  { href: "#niveis", label: "Metodologia" },
+  { href: "#inauguracao", label: "Inauguração" },
+  { href: "#kids", label: "Kids" },
   { href: "#localizacao", label: "Localização" },
 ];
 
@@ -25,29 +25,18 @@ export default function Header() {
 
   return (
     <header
-      className={`fixed inset-x-0 top-0 z-50 transition-all duration-500 ${
-        scrolled
-          ? "bg-secondary/95 backdrop-blur-md shadow-lg shadow-black/20"
-          : "bg-gradient-to-b from-secondary/60 to-transparent"
+      className={`fixed inset-x-0 top-0 z-50 bg-gradient-to-b from-neutral-200 to-white transition-shadow duration-500 ${
+        scrolled ? "shadow-md shadow-black/10" : ""
       }`}
     >
       <div className="mx-auto flex max-w-7xl items-center justify-between px-5 py-3 md:px-8">
         <a href="#topo" className="flex items-center gap-3">
-          <span className="relative h-11 w-11 shrink-0 overflow-hidden rounded-full ring-1 ring-white/20">
-            <Image
-              src="/images/logo.png"
-              alt="Lavoyer Calistenia"
-              fill
-              sizes="44px"
-              className="object-cover"
-              priority
-            />
-          </span>
+          <LavoyerMark className="h-8 w-8 shrink-0 text-primary" />
           <span className="flex flex-col leading-none">
-            <span className="font-heading text-lg font-bold tracking-wide text-white">
+            <span className="font-heading text-lg font-bold tracking-wide text-neutral-700">
               LAVOYER
             </span>
-            <span className="text-[10px] font-medium uppercase tracking-[0.25em] text-primary">
+            <span className="text-[10px] font-medium uppercase tracking-[0.25em] text-neutral-500">
               Calistenia
             </span>
           </span>
@@ -58,7 +47,7 @@ export default function Header() {
             <a
               key={link.href}
               href={link.href}
-              className="font-body text-[15px] font-medium leading-none text-white/85 transition-colors hover:text-primary"
+              className="font-body text-[15px] font-medium leading-none text-secondary transition-colors hover:text-primary"
             >
               {link.label}
             </a>
@@ -73,7 +62,7 @@ export default function Header() {
           type="button"
           aria-label="Abrir menu"
           onClick={() => setMenuOpen((v) => !v)}
-          className="flex h-10 w-10 items-center justify-center rounded-full text-white lg:hidden"
+          className="flex h-10 w-10 items-center justify-center rounded-full text-secondary lg:hidden"
         >
           <svg viewBox="0 0 24 24" fill="none" className="h-6 w-6">
             {menuOpen ? (
@@ -96,14 +85,14 @@ export default function Header() {
       </div>
 
       {menuOpen && (
-        <div className="border-t border-white/10 bg-secondary px-5 py-6 lg:hidden">
+        <div className="border-t border-black/5 bg-white px-5 py-6 lg:hidden">
           <nav className="flex flex-col gap-5">
             {navLinks.map((link) => (
               <a
                 key={link.href}
                 href={link.href}
                 onClick={() => setMenuOpen(false)}
-                className="font-body text-base font-medium text-white/85"
+                className="font-body text-base font-medium text-secondary"
               >
                 {link.label}
               </a>

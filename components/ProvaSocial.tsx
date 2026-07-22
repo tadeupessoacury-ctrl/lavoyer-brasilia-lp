@@ -1,15 +1,16 @@
 import FadeIn from "./FadeIn";
 import AnimatedCounter from "./AnimatedCounter";
+import { site } from "@/lib/site";
 
 const stats = [
-  { target: 9, suffix: "", label: "Anos de Mercado" },
-  { target: 7, suffix: "", label: "Níveis de Graduação" },
-  { target: 3, suffix: "", label: "Modalidades de Treino" },
+  { target: parseInt(site.anosMercado, 10) || 10, suffix: "", label: "Anos de metodologia" },
+  { target: 7, suffix: "", label: "Níveis de graduação" },
+  { target: 3, suffix: "", label: "Modalidades de treino" },
 ];
 
 export default function ProvaSocial() {
   return (
-    <section className="border-y border-black/5 bg-surface-light py-16 md:py-20">
+    <section id="numeros" className="border-y border-black/5 bg-background py-16 md:py-20">
       <div className="mx-auto max-w-7xl px-5 md:px-8">
         <div className="grid grid-cols-3 gap-6 md:gap-10">
           {stats.map((stat, i) => (

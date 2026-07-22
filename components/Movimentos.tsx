@@ -1,9 +1,9 @@
 "use client";
 
-import Image from "next/image";
 import { useEffect, useRef } from "react";
 import FadeIn from "./FadeIn";
 import SplitReveal from "./SplitReveal";
+import VideoCard from "./VideoCard";
 
 const movimentos = [
   { src: "/images/movimento-1.jpg", alt: "Aluno em L-sit nas paralelas Lavoyer" },
@@ -27,8 +27,6 @@ export default function Movimentos() {
     let pausedUntil = 0;
     let lastSetLeft = track.scrollLeft;
 
-    // Any scroll we didn't just write ourselves means the user is dragging —
-    // pause the marquee and let it resume once they've been idle for a bit.
     const handleScroll = () => {
       if (Math.abs(track.scrollLeft - lastSetLeft) < 1) return;
       pausedUntil = performance.now() + RESUME_DELAY;
@@ -61,16 +59,13 @@ export default function Movimentos() {
   }, []);
 
   return (
-    <section id="movimentos" className="bg-surface-light py-20 md:py-28">
+    <section id="movimentos" className="overflow-hidden bg-[#0C0C0C] py-20 md:py-28">
       <div className="mx-auto max-w-7xl px-5 md:px-8">
-        <FadeIn className="mx-auto max-w-2xl text-center">
-          <span className="font-heading text-lg font-semibold uppercase tracking-[0.2em] text-primary md:text-xl">
-            Movimentos Calistênicos
-          </span>
+        <FadeIn className="max-w-xl">
           <SplitReveal
             as="h2"
-            className="mt-3 text-3xl font-bold uppercase text-secondary md:text-4xl"
-            lines="O corpo como único equipamento"
+            className="text-3xl font-bold text-white md:text-4xl"
+            lines="Calistenia em ação"
           />
         </FadeIn>
       </div>
@@ -78,21 +73,17 @@ export default function Movimentos() {
       <FadeIn delay={150}>
         <div
           ref={trackRef}
-          className="scrollbar-none mt-10 flex gap-4 overflow-x-auto px-5 pb-4 md:px-8"
+          className="scrollbar-none mt-10 flex gap-px overflow-x-auto px-5 pb-4 md:px-8"
         >
           {[...movimentos, ...movimentos].map((mov, i) => (
-            <div
+            <VideoCard
               key={`${mov.src}-${i}`}
-              className="relative aspect-[3/4] w-[240px] shrink-0 overflow-hidden rounded-2xl sm:w-[300px] md:w-[340px]"
-            >
-              <Image
-                src={mov.src}
-                alt={mov.alt}
-                fill
-                sizes="340px"
-                className="object-cover transition-transform duration-700 hover:scale-105"
-              />
-            </div>
+              src={mov.src}
+              alt={mov.alt}
+              showPlayIcon={false}
+              className="w-[220px] shrink-0 sm:w-[260px] md:w-[300px]"
+              sizes="300px"
+            />
           ))}
         </div>
       </FadeIn>

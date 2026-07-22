@@ -1,14 +1,17 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #0c0c0c;
-  --color-primary: #ff6b00;
-  --color-primary-dark: #e05f00;
-  --color-secondary: #0c0c0c;
-  --color-surface-light: #f4f4f4;
-  --color-kids: #0ea5e9;
-  --color-kids-dark: #0284c7;
+  --background: #f6f6f4;
+  --foreground: #0a0a0a;
+  --color-primary: #f07b20;
+  --color-primary-dark: #d4691a;
+  --color-secondary: #0a0a0a;
+  --color-surface-light: #f6f6f4;
+  --color-surface-mid: #efefed;
+  --color-divider: #e0e0de;
+  --color-kids: #2b7fe1;
+  --color-kids-dark: #1f66bd;
+  --color-kids-tint: #f4f8ff;
   --color-fit: #f5c518;
   --color-fit-dark: #d6a90f;
 }
@@ -20,8 +23,11 @@
   --color-primary-dark: var(--color-primary-dark);
   --color-secondary: var(--color-secondary);
   --color-surface-light: var(--color-surface-light);
+  --color-surface-mid: var(--color-surface-mid);
+  --color-divider: var(--color-divider);
   --color-kids: var(--color-kids);
   --color-kids-dark: var(--color-kids-dark);
+  --color-kids-tint: var(--color-kids-tint);
   --color-fit: var(--color-fit);
   --color-fit-dark: var(--color-fit-dark);
   --font-heading: var(--font-saira);
@@ -36,6 +42,18 @@ body {
   background: var(--background);
   color: var(--foreground);
   font-family: var(--font-body), sans-serif;
+  font-weight: 300;
+  position: relative;
+}
+
+body::after {
+  content: "";
+  position: fixed;
+  inset: 0;
+  z-index: 9990;
+  pointer-events: none;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='200'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='200' height='200' filter='url(%23n)' opacity='0.016'/%3E%3C/svg%3E");
+  mix-blend-mode: multiply;
 }
 
 h1, h2, h3, h4, h5, h6 {

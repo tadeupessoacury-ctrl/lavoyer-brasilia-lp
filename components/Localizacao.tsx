@@ -17,12 +17,11 @@ export default function Localizacao() {
           </span>
           <SplitReveal
             as="h2"
-            className="mt-3 text-3xl font-bold uppercase md:text-4xl"
-            lines="Venha nos conhecer no Noroeste"
+            className="mt-3 text-3xl font-bold md:text-4xl"
+            lines="Setor Noroeste, Brasília."
           />
           <p className="mt-4 font-body text-white/70 md:text-lg">
-            Estrutura completa em uma das regiões mais valorizadas de {site.cidadeEstado}.
-            Agende sua semana experimental e conheça o espaço de perto.
+            A única academia de calistenia com metodologia própria na região.
           </p>
 
           <div className="mt-8 space-y-5">
@@ -39,13 +38,9 @@ export default function Localizacao() {
             </div>
             <div className="flex items-start gap-3">
               <svg viewBox="0 0 24 24" fill="none" className="mt-0.5 h-5 w-5 shrink-0 text-primary">
-                <path
-                  d="M4 5.5C4 4.67 4.67 4 5.5 4h2.72c.6 0 1.13.4 1.3.98l1 3.4a1.36 1.36 0 0 1-.42 1.42l-1.4 1.15a13.5 13.5 0 0 0 5.85 5.85l1.15-1.4a1.36 1.36 0 0 1 1.42-.42l3.4 1a1.36 1.36 0 0 1 .98 1.3v2.72c0 .83-.67 1.5-1.5 1.5h-.75C10.1 21.5 2.5 13.9 2.5 4.75V4"
-                  stroke="currentColor"
-                  strokeWidth={1.4}
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                />
+                <rect x="3" y="3" width="18" height="18" rx="5" stroke="currentColor" strokeWidth={1.6} />
+                <circle cx="12" cy="12" r="4.2" stroke="currentColor" strokeWidth={1.6} />
+                <circle cx="17.2" cy="6.8" r="1.1" fill="currentColor" />
               </svg>
               <p className="font-body text-white/85">{site.instagram}</p>
             </div>

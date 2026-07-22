@@ -1,62 +1,56 @@
 import Image from "next/image";
 import CTAButton from "./CTAButton";
 import SplitReveal from "./SplitReveal";
-import { site, slogans } from "@/lib/site";
+import FadeIn from "./FadeIn";
 
 export default function Hero() {
   return (
-    <section
-      id="topo"
-      className="relative overflow-hidden bg-secondary pt-28 pb-16 md:pt-36 md:pb-24 lg:pt-40 lg:pb-28"
-    >
-      <div className="pointer-events-none absolute -top-40 right-0 h-[520px] w-[520px] rounded-full bg-primary/20 blur-[140px]" />
-      <div className="pointer-events-none absolute bottom-0 left-0 h-[320px] w-[320px] rounded-full bg-primary/10 blur-[120px]" />
+    <section id="topo" className="relative flex min-h-[92vh] items-end overflow-hidden bg-secondary">
+      <Image
+        src="/images/hero-capa-mobile.jpg"
+        alt="Logo da Lavoyer Calistenia em relevo na parede do CT"
+        fill
+        priority
+        quality={95}
+        sizes="100vw"
+        className="block object-contain object-top md:hidden"
+      />
+      <Image
+        src="/images/hero-capa-v2.jpg"
+        alt="Logo da Lavoyer Calistenia em relevo na parede do CT"
+        fill
+        priority
+        quality={95}
+        sizes="100vw"
+        className="hidden object-cover object-top grayscale md:block"
+      />
+      <div className="absolute inset-0 bg-gradient-to-t from-secondary via-secondary/55 to-secondary/10" />
+      <div className="absolute inset-0 bg-gradient-to-r from-secondary/70 via-transparent to-transparent" />
 
-      <div className="relative z-10 mx-auto grid max-w-7xl items-center gap-12 px-5 md:px-8 lg:grid-cols-[0.95fr_1.2fr] lg:gap-10">
-        <div className="order-2 text-center lg:order-1 lg:text-left">
-          <span className="mb-6 inline-flex items-center gap-2 rounded-full border border-primary/40 bg-primary/10 px-4 py-1.5 text-xs font-medium uppercase tracking-[0.2em] text-primary">
-            Pré-lançamento · Brasília
-          </span>
+      <div className="relative z-10 mx-auto w-full max-w-7xl px-5 pb-16 pt-40 md:px-8 md:pb-20 md:pt-52">
+        <FadeIn className="inline-flex items-center gap-2 rounded-full border border-primary/40 bg-primary/10 px-4 py-1.5 text-[11px] font-semibold uppercase tracking-[0.25em] text-primary backdrop-blur-sm">
+          Pré-lançamento · Setor Noroeste, Brasília
+        </FadeIn>
 
-          <SplitReveal
-            as="h1"
-            className="text-5xl font-bold uppercase leading-[1.02] text-white sm:text-6xl md:text-7xl"
-            lines={[
-              { text: "Lavoyer" },
-              { text: "Calistenia", className: "text-primary" },
-            ]}
-          />
+        <SplitReveal
+          as="h1"
+          delay={100}
+          className="mt-6 max-w-3xl text-4xl font-bold uppercase leading-[0.98] text-white sm:text-5xl md:text-6xl lg:text-7xl"
+          lines={[
+            { text: "A maior calistenia" },
+            { text: "da América Latina" },
+            { text: "chega a Brasília.", className: "text-primary" },
+          ]}
+        />
 
-          <p className="mx-auto mt-4 max-w-lg font-heading text-lg font-semibold text-white/80 md:text-xl lg:mx-0">
-            Calistenia em Brasília — para todos os corpos e todos os níveis
-          </p>
+        <FadeIn delay={250} className="mt-6 max-w-md font-body text-base text-white/70 md:text-lg">
+          Metodologia própria, graduação por níveis e treinadores capacitados — agora no
+          Distrito Federal.
+        </FadeIn>
 
-          <p className="mx-auto mt-5 max-w-lg font-body text-base text-white/70 md:text-lg lg:mx-0">
-            Metodologia própria Lavoyer, feita para quem está começando agora — sem
-            pré-requisitos, sem experiência necessária. Você é acompanhado por profissionais
-            formados na nossa metodologia durante toda a jornada.
-          </p>
-
-          <p className="mx-auto mt-6 max-w-lg font-heading text-lg font-semibold text-primary md:text-xl lg:mx-0">
-            {slogans[0] ?? "Venha com o que você tem: o seu corpo"}
-          </p>
-
-          <div className="mt-9 flex justify-center lg:justify-start">
-            <CTAButton size="lg" />
-          </div>
-        </div>
-
-        <div className="relative order-1 aspect-[5/4] w-full overflow-hidden rounded-3xl shadow-2xl shadow-black/60 ring-1 ring-white/10 lg:order-2">
-          <Image
-            src="/images/hero-capa.jpg"
-            alt={`Praticante de calistenia em parada de mão na ${site.nomeFantasia}`}
-            fill
-            priority
-            sizes="(min-width: 1024px) 40vw, 100vw"
-            className="object-cover object-center"
-          />
-          <div className="absolute inset-0 bg-gradient-to-t from-secondary/60 via-transparent to-transparent" />
-        </div>
+        <FadeIn delay={350} className="mt-10 border-t border-white/10 pt-8">
+          <CTAButton size="lg" />
+        </FadeIn>
       </div>
     </section>
   );

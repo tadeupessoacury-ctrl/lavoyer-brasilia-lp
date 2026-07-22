@@ -12,9 +12,9 @@ type CTAButtonProps = {
 
 const variants = {
   solid:
-    "bg-primary text-black hover:bg-primary-dark shadow-lg shadow-primary/25",
+    "bg-white text-secondary border border-black/10 shadow-sm hover:bg-primary hover:text-white hover:border-primary active:bg-primary active:text-white",
   outline:
-    "border-2 border-primary text-primary hover:bg-primary hover:text-black",
+    "border-2 border-primary text-primary hover:bg-primary hover:text-white active:bg-primary active:text-white",
   light: "bg-white text-black hover:bg-white/90",
 };
 
