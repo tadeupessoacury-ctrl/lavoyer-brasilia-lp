@@ -29,8 +29,12 @@ export const metadata: Metadata = {
     "musculação Noroeste",
   ],
   icons: {
-    icon: "/images/logo.png",
-    apple: "/images/logo.png",
+    icon: [
+      { url: "/favicon.ico", sizes: "any" },
+      { url: "/images/favicon-white-192.png", type: "image/png", sizes: "192x192" },
+      { url: "/images/favicon-white-512.png", type: "image/png", sizes: "512x512" },
+    ],
+    apple: "/images/favicon-white-180.png",
   },
   openGraph: {
     title: "Lavoyer Calistenia | Brasília - Noroeste",
