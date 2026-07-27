@@ -8,7 +8,7 @@ export const site = {
     "SHCNW SQNW Bloco A, sala 9 - St. Noreste, Brasília - DF, 70688-260",
   horario: process.env.NEXT_PUBLIC_HORARIO ?? "",
   whatsapp: process.env.NEXT_PUBLIC_WHATSAPP ?? "5561991677147",
-  instagram: process.env.NEXT_PUBLIC_INSTAGRAM ?? "@lavoyerbsb.noroeste",
+  instagram: process.env.NEXT_PUBLIC_INSTAGRAM ?? "@lavoyerbrasilia",
   anosMercado: process.env.NEXT_PUBLIC_ANOS_MERCADO ?? "10 anos",
   textoCTA: process.env.NEXT_PUBLIC_TEXTO_CTA ?? "Agendar Aula Experimental",
   diferencial1:

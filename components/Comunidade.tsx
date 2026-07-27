@@ -7,7 +7,7 @@ export default function Comunidade() {
       <div className="grid gap-px bg-white/5 md:grid-cols-3">
         <FadeIn className="relative aspect-[3/4] overflow-hidden">
           <Image
-            src="/images/personal-1.jpg"
+            src="/images/turma-nota.jpeg"
             alt="Turma Lavoyer em treino"
             fill
             sizes="(min-width: 768px) 33vw, 100vw"
