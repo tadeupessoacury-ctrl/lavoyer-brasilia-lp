@@ -1,3 +1,4 @@
+import Image from "next/image";
 import FadeIn from "./FadeIn";
 
 const diferenciais = [
@@ -19,19 +20,27 @@ const diferenciais = [
   },
 ];
 
-function FotoPlaceholder({ className = "" }: { className?: string }) {
+const fotosGraduacao = [
+  { src: "/images/graduacao-kids-1.jpg", alt: "Graduação Lavoyer Kids 2025" },
+  { src: "/images/graduacao-kids-2.jpg", alt: "Graduação Lavoyer Kids 2025" },
+  { src: "/images/graduacao-kids-3.jpg", alt: "Graduação Lavoyer Kids 2025" },
+  { src: "/images/graduacao-kids-4.jpg", alt: "Graduação Lavoyer Kids 2025" },
+];
+
+function FotoKids({
+  src,
+  alt,
+  sizes,
+  className = "",
+}: {
+  src: string;
+  alt: string;
+  sizes: string;
+  className?: string;
+}) {
   return (
-    <div
-      className={`flex flex-col items-center justify-center gap-2 rounded-xl border-2 border-dashed border-kids/30 bg-white/40 ${className}`}
-    >
-      <svg viewBox="0 0 24 24" fill="none" className="h-6 w-6 text-kids/50" aria-hidden="true">
-        <rect x="3" y="5" width="18" height="14" rx="2" stroke="currentColor" strokeWidth="1.5" />
-        <circle cx="9" cy="10.5" r="1.75" stroke="currentColor" strokeWidth="1.5" />
-        <path d="M21 15l-5-4-4.5 4-2.5-2-6 5" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
-      </svg>
-      <span className="font-heading text-[10px] font-medium uppercase tracking-[0.2em] text-kids/50">
-        Foto em breve
-      </span>
+    <div className={`relative overflow-hidden rounded-xl border-t-2 border-kids/30 ${className}`}>
+      <Image src={src} alt={alt} fill sizes={sizes} className="object-cover" />
     </div>
   );
 }
@@ -66,7 +75,12 @@ export default function Kids() {
 
         <div className="mt-16 grid gap-6 md:grid-cols-2 md:gap-8">
           <FadeIn>
-            <FotoPlaceholder className="min-h-[320px] border-t-2 border-kids/30 md:min-h-[420px]" />
+            <FotoKids
+              src={fotosGraduacao[0].src}
+              alt={fotosGraduacao[0].alt}
+              sizes="(min-width: 768px) 50vw, 100vw"
+              className="min-h-[320px] md:min-h-[420px]"
+            />
           </FadeIn>
           <FadeIn delay={100} className="flex flex-col justify-center gap-1 rounded-2xl bg-white p-8">
             {diferenciais.map((item) => (
@@ -82,9 +96,14 @@ export default function Kids() {
         </div>
 
         <div className="mt-6 grid grid-cols-3 gap-2">
-          {[0, 1, 2].map((i) => (
-            <FadeIn key={i} delay={i * 100}>
-              <FotoPlaceholder className="aspect-[4/3]" />
+          {fotosGraduacao.slice(1).map((foto, i) => (
+            <FadeIn key={foto.src} delay={i * 100}>
+              <FotoKids
+                src={foto.src}
+                alt={foto.alt}
+                sizes="(min-width: 768px) 33vw, 100vw"
+                className="aspect-[4/3]"
+              />
             </FadeIn>
           ))}
         </div>
