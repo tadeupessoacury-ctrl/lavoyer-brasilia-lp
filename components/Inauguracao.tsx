@@ -3,7 +3,7 @@ import SplitReveal from "./SplitReveal";
 import CTAButton from "./CTAButton";
 
 const pontos = [
-  "Aula experimental gratuita, sem compromisso",
+  "Aula experimental, sem compromisso",
   "Acompanhamento próximo desde o primeiro treino",
   "7 níveis de progressão, do zero ao avançado",
   "Único centro de calistenia estruturado no Noroeste",

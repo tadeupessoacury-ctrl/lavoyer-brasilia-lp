@@ -15,7 +15,7 @@ const perguntas = [
   },
   {
     q: "Como funciona a aula experimental?",
-    a: "Você agenda pelo WhatsApp, conhece o espaço e os treinadores, e faz uma aula completa gratuitamente — sem compromisso.",
+    a: "Você agenda pelo WhatsApp, conhece o espaço e os treinadores, e faz uma aula completa — sem compromisso.",
   },
   {
     q: "O que é a Graduação Lavoyer?",
